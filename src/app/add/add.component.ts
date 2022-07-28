@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { EmployeeService } from '../employee.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-add',
@@ -9,17 +9,18 @@ import { EmployeeService } from '../employee.service';
 })
 export class AddComponent implements OnInit {
 
-  constructor(private es:EmployeeService) { }
-public empForm= new FormGroup({
-  id:new FormControl,
-  name:new FormControl,
-  salary:new FormControl('0'),
-  grade:new FormControl('A')
-});
+  constructor(private st:StudentService) { }
+  public stdForm= new FormGroup({
+    rollno:new FormControl(0),
+    name:new FormControl,
+    age:new FormControl(0),
+    city:new FormControl
+  });
+
   ngOnInit() {
   }
   add(){
-    console.log(this.empForm.value);
-this.es.addEmployee(this.empForm.value)
+    console.log(this.stdForm.value);
+this.st.addStudent(this.stdForm.value)
   }
 }

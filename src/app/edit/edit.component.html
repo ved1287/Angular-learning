@@ -1,4 +1,9 @@
-<p>add works!</p>
+<p>edit works!</p>
+<label> RollNo To Be Edited</label>
+<input #inp1>
+
+<button (click)="edit(inp1.value)">Edit</button><br><br>
+
 {{stdForm.value|json}}<br>
 <form [formGroup]="stdForm">
     <table>
@@ -19,7 +24,8 @@
             <td><input formControlName="city"></td>
         </tr>
         <tr>
-            <td colspan="2"><button type="button" (click)="add()">ADD</button></td>
+            <td colspan="2"><button type="button" (click)="update()">Update</button></td>
         </tr>
     </table>
 </form>
+

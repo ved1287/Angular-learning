@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-delete',
@@ -8,11 +8,11 @@ import { EmployeeService } from '../employee.service';
 })
 export class DeleteComponent implements OnInit {
 
-  constructor(private es:EmployeeService) { }
+  constructor(private es:StudentService) { }
 
   ngOnInit() {
   }
-delete(id){
-  this.es.deleteEmployee(id);
-}
+  delete(rollno){
+    this.es.deleteSudent(rollno);
+  }
 }

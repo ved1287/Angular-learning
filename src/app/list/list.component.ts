@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-list',
@@ -8,10 +8,10 @@ import { EmployeeService } from '../employee.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private es:EmployeeService) { }
-public employees=[];
+  constructor(private st:StudentService) { }
+  public students=[];
   ngOnInit() {
-    this.employees=this.es.getAllEmployees();
+    this.students=this.st.getAllStudents();
   }
 
 }

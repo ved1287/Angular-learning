@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Test1Component } from './test1/test1.component';
-import { Test2Component } from './test2/test2.component';
-import { Test3Component } from './test3/test3.component';
+import { AddComponent } from './add/add.component';
+import { DeleteComponent } from './delete/delete.component';
+import { EditComponent } from './edit/edit.component';
+import { FindComponent } from './find/find.component';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
-  {path:'add',component:Test1Component},
-  {path:'delete',component:Test2Component},
-  {path:'list',component:Test3Component}
+  {path:'add',component:AddComponent},
+  {path:'delete',component:DeleteComponent},
+  {path:'find',component:FindComponent},
+  {path:'list',component:ListComponent},
+  {path:'edit',component:EditComponent}
 ];
 
 @NgModule({

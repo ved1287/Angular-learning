@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-find',
@@ -8,12 +8,11 @@ import { EmployeeService } from '../employee.service';
 })
 export class FindComponent implements OnInit {
 
-  constructor(private es:EmployeeService) { }
-public employee;
+  constructor(private st:StudentService) { }
+  public student;
   ngOnInit() {
   }
-  find(id){
-this.employee=this.es.findEmployee(id);
-  }
-
+  find(rollno){
+    this.student=this.st.findStudent(rollno);
+      }
 }

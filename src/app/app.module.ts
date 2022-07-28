@@ -3,19 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Test1Component } from './test1/test1.component';
-import { Test2Component } from './test2/test2.component';
-import { Test3Component } from './test3/test3.component';
+import { AddComponent } from './add/add.component';
+import { DeleteComponent } from './delete/delete.component';
+import { FindComponent } from './find/find.component';
+import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Test1Component,
-    Test2Component,
-    Test3Component
+    AddComponent,
+    DeleteComponent,
+    FindComponent,
+    ListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
